@@ -57,11 +57,11 @@
 
         <!--aidl方式demo2-->
         <activity android:name=".aidl.demo2.BookManagerActivity2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
 
 
         </activity>
@@ -69,6 +69,21 @@
             android:process=":remote">
 
         </service>
+
+        <!--ContentProvider 方式 -->
+        <provider
+            android:authorities="com.dkp.ipcdemo.provider"
+            android:name="com.dkp.ipcdemo.provider.BookProVider"
+            android:permission="com.dkp.PROVIDER"
+            android:process=":provider"
+            />
+        <activity android:name=".provider.ProviderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
     </application>
