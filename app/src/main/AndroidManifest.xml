@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dkp.ipcdemo">
+    <!--权限验证-->
+    <permission android:name="com.dkp.permission.BOOK"
+        android:protectionLevel="normal"
+        />
+    <uses-permission android:name="com.dkp.permission.BOOK"/>
+    <application
+        android:name="com.dkp.ipcdemo.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <!--<intent-filter>-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:process=":remote" />
+        <activity
+            android:name=".SecondActivity"
+            android:process="com.dkp.ipcdemo.remote" />
+
+        <!-- Messenger demo-->
+
+        <activity android:name=".messenger.MessengerActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
+        </activity>
+        <!--messenger方式 5.Manifest里注册这个service-->
+        <!--<service-->
+            <!--android:name=".messenger.MessengerService"-->
+            <!--android:process=":remote" />-->
+
+        <!--aidl方式demo1-->
+        <activity android:name=".aidl.BookManagerActivity">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+
+        </activity>
+        <!--<service android:name=".aidl.BookManagerService"-->
+            <!--android:process=":remote"/>-->
+
+        <!--aidl方式demo2-->
+        <activity android:name=".aidl.demo2.BookManagerActivity2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+
+        </activity>
+        <service android:name=".aidl.demo2.BookManagerService2"
+            android:process=":remote">
+
+        </service>
+
+
+    </application>
+
+</manifest>
