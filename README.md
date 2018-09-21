@@ -5,4 +5,4 @@ Android跨进程通信的几种实现方式详解，包含AIDL、Messenger、Con
 2.AIDL的深度使用
 待扩展：
 1.ContentProvvider
-2.Socket
+2.Socket 
