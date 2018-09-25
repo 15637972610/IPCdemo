@@ -4,4 +4,5 @@ Android跨进程通信的几种实现方式详解，包含AIDL、Messenger、Con
 1.使用Messenger进行跨进程传递简单数据<br>
 2.AIDL的深度使用<br>
 3.ContentProvvider<br>
+4.添加连接池实现说明<br>
 问题联系邮箱：1575961582@qq.com
